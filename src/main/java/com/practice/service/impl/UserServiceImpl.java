@@ -20,22 +20,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto createOrUpdate(UserDto dto) {
 
-        User user=null;
-
+        User entity=null;
         // Update
         if (dto.getUuid() != null) {
-            user = userRepository.findById(dto.getUuid())
-                    .orElseThrow(() -> new RuntimeException("User not found"));
-
-            // merge non-null fields
-            userMapper.updateEntityFromDto(dto, user);
+            entity = userMapper.dtoToEntity(dto);
         }
         // Create
         else {
-            user = userMapper.dtoToEntity(dto);
+            entity = userMapper.dtoToEntity(dto);
         }
 
-        User saved = userRepository.save(user);
+        User saved = userRepository.save(entity);
         return userMapper.entityToDto(saved);
     }
 }
