@@ -3,7 +3,6 @@ package com.practice.dto;
 
 import lombok.*;
 
-@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +18,5 @@ public class UserDto {
     private String createdDate;
     private String updatedBy;
     private String updatedDate;
-
-    @Builder.Default
     private Boolean isDelete=false;
 }
