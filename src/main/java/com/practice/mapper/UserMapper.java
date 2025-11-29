@@ -11,7 +11,4 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 public interface UserMapper {
     User dtoToEntity(UserDto dto);
     UserDto entityToDto(User entity);
-
-    @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
-    void updateEntityFromDto(UserDto dto, @MappingTarget User entity);
 }
