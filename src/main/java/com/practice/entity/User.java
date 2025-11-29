@@ -26,15 +26,4 @@ public class User {
     private String email;
 
     private String city;
-
-    private String createdBy;
-
-    @CreationTimestamp
-    private LocalDateTime createdDate;
-
-    private String updatedBy;
-
-    @UpdateTimestamp
-    private LocalDateTime updatedDate;
-
 }

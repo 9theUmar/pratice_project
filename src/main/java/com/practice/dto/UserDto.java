@@ -14,9 +14,5 @@ public class UserDto {
     private String mobile;
     private String email;
     private String city;
-    private String createdBy;
-    private String createdDate;
-    private String updatedBy;
-    private String updatedDate;
     private Boolean isDelete=false;
 }
