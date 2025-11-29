@@ -2,7 +2,7 @@ package com.practice.mapper;
 
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UserMapper {
-    
+
 }
